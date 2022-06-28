@@ -1,0 +1,97 @@
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test</title>
+</head>
+
+<body>
+	<main>
+		<h1>Counter</h1>
+		<p>A simple counting web app</p>
+
+		<div class="counter">
+			<div class="counter-value">0</div>
+
+			<div class="counter-controls">
+				<button data-action="decrease">
+					<span>Decrease</span>
+				</button>
+
+				<button data-action="increase">
+					<span>Increase</span>
+				</button>
+			</div>
+		</div>
+
+		</div>
+	</main>
+
+  <script>
+    const actions = Array.from(document.querySelectorAll('[data-action]'));
+
+let counter = localStorage.getItem("counter") || 0;
+
+document.querySelector(".counter-value").innerText = counter;
+
+actions.forEach(action => {
+	action.addEventListener('click', () => {
+		const action_name = action.dataset.action;
+
+
+		switch (action_name) {
+			case 'increase':
+				counter++;
+        localStorage.setItem("counter", counter);
+				break;
+			case 'decrease':
+				counter--;
+        localStorage.setItem("counter", counter);
+				break;
+		
+		}
+
+		document.querySelector(".counter-value").innerText = counter;
+	});
+});
+  </script>
+<!--  <p>Vote: <span></span></p>
+  <button type="button" class="plus">Upvote</button>
+  <button type="button" class="minus">Downvote</button>
+
+  <script>
+
+let count = parseInt(localStorage.getItem('count')) || 0;
+    const countEl = document.querySelector('span');
+   
+    localStorage.setItem('count', count);
+   
+    countEl.textContent = count;
+
+    const plusbutton = document.querySelector('.plus');
+
+    const setCount = (count) =>{
+       countEl.textContent = count;
+      localStorage.getItem('count', count);
+    }
+
+    plusbutton.addEventListener('click', ()=>{
+      count += 1;
+      setCount(count);
+    } );
+
+
+    const minusbutton = document.querySelector('.minus');
+
+    
+    minusbutton.addEventListener('click', ()=>{
+    count -= 1
+    setCount(count);
+  } );
+  </script>
+-->
+</body>
+</html>
+

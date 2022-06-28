@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Social Safeguard</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+
+body {
+  font-family: Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 80px;
+  padding: 10px;
+  background: #656768;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #252726;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.topic {
+            margin: 10px 60px;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        h1, h4, ol {
+            margin: 0;
+        }
+        p {
+            margin: 5px 0;
+        }
+        .top-bar {
+            background-color: skyblue;
+            padding: 0 40px;
+        }
+        .main {
+            background-color: #F6F6EF;
+            padding: 10px 15px;
+        }
+        .row {
+            padding: 5px 0;
+        }
+        .bottom {
+            display: flex;
+            color: grey;
+            font-size: 12px;
+        }
+        .timestamp {
+            padding-right: 10px;
+        }
+</style>
+
+
+<body>
+<!-- Header -->
+<header class="w3-container w3-green w3-center" style="padding:128px 16px">
+    <h1 class="w3-margin w3-jumbo">SOCIAL NETWORK SAFEGUARD</h1>
+    <p class="w3-xlarge">Find If Your URL Is Malicious Phishing URL</p>
+        
+  <div id="list_div">
+    <div class="list-item">
+        <h3>URL</h3>
+        <input type="text" id="URL"> <button type="submit" id="btn" onclick="getsearch()">DETECT</button>
+        <p>RESULT: </p>
+    </div> 
+  </div>   
+</header>
+</body>
+ <!-- The core Firebase JS SDK is always required and must be listed first -->
+ <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+<script src="popup.js"> </script>
+</html>

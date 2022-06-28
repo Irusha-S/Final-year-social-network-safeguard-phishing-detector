@@ -1,0 +1,89 @@
+<template>
+  <div class="page" data-name="thread">
+    <!-- Top Navbar -->
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner">
+        <div class="left">
+          <a href="/" class="link icon-only back-link">
+            <i class="icon icon-back"></i>
+          </a>
+          <div class="title" id="thread-title"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Scrollable Page Content-->
+    <div class="page-content">
+      <div class="card demo-card-header-pic">
+        <div id="thread-img" class="card-header align-items-flex-end"></div>
+        <div class="card-content card-content-padding">
+          <p id="thread-description"></p>
+        </div>
+      </div>
+    <p style="text-align:center ;">Votes: <a id="count">0</a></p>
+
+<script>
+  var count = 0;
+
+
+function Onplus() {
+    
+
+  count += 1;
+  document.getElementById("count").innerHTML = count;
+};
+
+function Onminus() {
+  count -= 1;
+  document.getElementById("count").innerHTML = count;
+};
+
+function Onplus() {
+    count += 1;
+    if (count > 5) {
+        window.alert("Eligible");
+        
+    }
+    document.getElementById("count").innerHTML = count;
+};
+function Onminus() {
+  count -= 1;
+    if (count < 0) {
+        window.alert("minus value");
+    }
+    document.getElementById("count").innerHTML = count;
+}
+
+</script>
+
+      <div class="block-title">Comments</div>
+      <!-- Comment list -->
+      <div class="comments"></div>
+      <!-- The Modal -->
+      <div id="enlarge-image" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-image">
+      </div>
+    </div>
+    <div class="fab fab-right-bottom display" id="new-comment">
+      <a href="#" class="new-comment-dialog"><i class="icon f7-icons">bubble_left_fill</i></a>
+    </div>
+  </div>
+</template>
+
+<script>
+  return {
+    on: {
+      pageInit: function (e, page) {
+        const newCommentBtn = document.querySelector('#new-comment');
+
+        // Toggle UI Element
+        auth.onAuthStateChanged(user => {
+          (user)
+            ? newCommentBtn.classList.remove('display')
+            : newCommentBtn.classList.add('display');
+        });
+      }
+    }
+  }
+  </script>

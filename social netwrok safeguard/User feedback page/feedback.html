@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback Submission page</title>
+  </head>
+  <body>
+      <style>
+          * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: inter;
+  font-weight: normal;
+  
+    background-image: url('https://sectigostore.com/blog/wp-content/uploads/2020/03/types-of-phishing-attacks.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+   color:white;
+  
+}
+
+h1 {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 35px;
+}
+
+p {
+  text-align: center;
+  margin: 15px auto 0px auto;
+  font-size: 16px;
+  width: 80%;
+}
+.submission-form {
+  margin: 35px auto 0px auto;
+  width: 80%;
+}
+
+.submission-form label {
+  font-size: 20px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.submission-form input {
+  padding: 12px 20px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background: rgba(255, 255, 255, 0.63);
+  font-size: 18px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.submission-form input:focus {
+  border-bottom: 2px solid #1a883f;
+}
+
+.submission-form textarea {
+  padding: 12px 20px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background: rgba(255, 255, 255, 0.705);
+  font-size: 18px;
+  border-radius: 3px;
+  width: 100%;
+  font-family: inter;
+  font-weight: normal;
+}
+
+.submission-form textarea:focus {
+  border-bottom: 2px solid #1a883f;
+}
+
+.submission-form button {
+  font-size: 19px;
+  width: 100%;
+  margin-top: 25px;
+  border: none;
+  padding: 12px 20px;
+  background-color: #22a9b3;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  border-bottom: 3px solid #1a6588;
+}
+
+.submission-form button:hover {
+  background-color: #1a6e88;
+  border-bottom: 3px solid #2296b3;
+}
+
+.infosResult div p{
+  width: 80%;
+  margin: 30px auto;
+  background:rgba(255, 255, 255, 0.705);
+  padding: 20px;
+  border-bottom: 3px solid lightgray;
+  color: black;
+}
+
+@media all and (min-width: 1000px) {
+  .submission-form {
+    width: 40%;
+  }
+}
+
+@media all and (min-width: 1080px) {
+  .submission-form {
+    width: 30%;
+  }
+}
+
+      </style>
+    
+    <h1 style="color: rgba(143, 222, 228, 0.808);">SUBMIT YOUR FEEDBACK</h1>
+    <p>Send a message and we will get back to you within 24 hours.</p>
+    <form class="submission-form">
+      <label for="">name</label><br />
+      <input class="name" type="text" placeholder="Enter your name" required/><br/>
+      <label for="">Email</label><br />
+      <input class="email" type="email" placeholder="email" required /><br/>
+      <label for="">Message (Let us know about ways to improve)</label><br />
+      <textarea
+        class="message"
+        name=""
+        id=""
+        cols="30"
+        rows="10"
+        placeholder="message"
+        required
+      ></textarea
+      >
+
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase.js"></script>
+    <script src="feedback.js"></script>
+  </body>
+</html>
